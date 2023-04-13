@@ -1,0 +1,9 @@
+torch
+requests
+psutil
+torchvision
+pyyaml
+tqdm
+seaborn
+flask
+opencv-python

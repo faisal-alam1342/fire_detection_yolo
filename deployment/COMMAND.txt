@@ -1,0 +1,1 @@
+python run_model.py --source /tmp/input.mp4 --weights ../models/trained_model.pt --conf 0.2 --email_off

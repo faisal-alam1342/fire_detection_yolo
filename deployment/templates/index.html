@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>File Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Faisal Fire Detection Module</h1>
+      </header>
+      <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="image">Select an Image/Stream</label>
+          <input type="file" name="image" id="image">
+        </div>
+      <div class="form-group">
+        <label for="stream">Stream URL</label>
+        <input type="text" name="stream" id="stream" placeholder="Enter stream URL">
+      </div> 
+        <div class="form-group">
+          <label for="email">Recipient Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="conv">Confidence Threshold</label>
+          <input type="text" name="conv" id="conv" placeholder="Enter threshold Confidence">               
+        <div class="form-group">
+          <input type="submit" value="Upload">
+        </div>
+        <div class="form-group">
+          <input type="reset" value="Clear">
+        </div>
+      </form>
+      {% if result %}
+      <div class="result">
+        <h2>Result:</h2>
+        <pre>{{ result }}</pre>
+      </div>
+      {% endif %}
+      {% if files %}
+      <div class="uploaded-files">
+        <h2>Uploaded Files:</h2>
+        <ul>
+          {% for file in files %}
+          <li>
+            {{ file }}
+            <a href="{{ url_for('download', filename=file) }}">Download</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      <footer class="footer">
+        <p>Powered by YOLO</p>
+        <a href="https://github.com"><img src="{{ url_for('static', filename='github.png') }}" alt="GitHub" style="width: 50px; height: 50px; margin-left: 10px; float: right;"></a>
+        <a href="https://linkedin.com"><img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn" style="width: 80px; height: 50px; margin-left: 10px; float: right;"></a>
+      </footer>
+    </div>
+  </body>
+</html>
