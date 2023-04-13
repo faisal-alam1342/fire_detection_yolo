@@ -13,7 +13,7 @@ conda create --name new_env python
 note: will recommend using virutal env for no dependencies conflict
 # pip install all the dependecies
 pip install -r pip_install.txt
-# Run directly from terminal (sample commandS)
+# Run directly from terminal (sample commands for input types)
 (image)
 python run_model.py --source testing/test_image.png --weights ../models/trained_model.pt --conf 0.2 --email_off
 (video)
