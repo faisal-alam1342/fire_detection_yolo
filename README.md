@@ -3,14 +3,19 @@ custom YOLO model which will can be used to detect fire, this is complete end to
 The top level dependencies are listed in pip_install.
 # How to run the model
 # step to follow
+```
 git clone https://github.com/faisal-alam1342/fire_detection_yolo.git
+```
+```
 cd fire_detection_yolo/deployment
+```
 Install pip package manager on your system
 for windows --> Follow this https://www.youtube.com/watch?v=1mn-vA5l_90
 for linux/unix --> directly install from default or preferred package manager
 # create an env (optional)
+```
 conda create --name new_env python
-
+```
 note: will recommend using virutal env for no dependencies conflict
 # pip install all the dependecies
 pip install -r pip_install.txt
