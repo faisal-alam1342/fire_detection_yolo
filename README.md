@@ -1,6 +1,6 @@
 # fire_detection_yolo
-custom YOLO model which will can be used to detect fire, this is complete end to end to project in which web based flask API is been used to streamline the fire detection system with notification intregation with email using SMTP client. It support direct https stream, webcam, videos, images, frame. Please follow the steps to get the setups running.
-The top level dependencies are listed in pip_install.
+custom YOLO model which can be used to detect fire, this is a complete end to end to project in which i have used a web based flask API is to streamline the fire detection system as well as notification intregation with email using SMTP client. It supports direct https streams, webcam, videos, images, frame. Please follow the steps to complete installation.
+
 # How to run the model
 # step to follow
 ```
@@ -39,7 +39,9 @@ python run_model.py --source {http_link_here} --weights ../models/trained_model.
 note: --conf is confidence, please notice the --email_off flag is there which will turn off email notification if one wants email notification, replace --email_off with --email yourmail@mail.com
 
 # Run Through the flask API (GUI web application)
+```
 python app.py
+```
 
 now open http://localhost:5000/
 it will open a gui web window like this
